@@ -31,7 +31,7 @@
 - [📝 License](#license)
 
 
-# portfolio
+# Todo-list
 This project is Todo-list-projects microvers which will be used for learning in the microverse. No complex codind is required for this exercise. The goal is to master all of the tools and best practices learned in previous steps. They will be used in all Microverse projects and most likely in future jobs as well, so it is important to know!.
 1- HTML
 2- css
@@ -130,8 +130,6 @@ You can deploy this project using:
 ## Author <a name="author"></a>
 
 ## 👤 THIERRY NOUMBUH (AXCELL EVANS)
-## 👤 YOUNG GAIUS
-## 👤 ZUWAIRA SADIQ (ZUWAIRANAJMA)
 
 - GitHub: [@githubhandle](https://github.com/axcell-0)
 - Twitter: [@twitterhandle](https://twitter.com/noumbuh)
@@ -143,9 +141,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] add a work section
-- [ ] add footer
-- [ ] add more styeling
+- [ ] add webpack
+- [ ] add a structure of todo-list
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
