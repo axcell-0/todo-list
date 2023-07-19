@@ -7,8 +7,9 @@ module.exports = {
     main: './src/index.js',
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   devServer: {
     static: path.resolve(__dirname, 'dist'),

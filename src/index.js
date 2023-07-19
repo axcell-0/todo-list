@@ -47,7 +47,7 @@ const displayTasks = () => {
 
   addedTasks.forEach((task, index) => {
     const textInput = task.querySelector('input[type="text"]');
-    task.addEventListener('dblclick', () => {
+    task.addEventListener('click', () => {
       textInput.readOnly = false;
       if (task.querySelector('.fa-ellipsis-vertical')) {
         const ellipsisIcon = task.querySelector('.fa-ellipsis-vertical');
