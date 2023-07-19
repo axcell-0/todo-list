@@ -1,15 +1,10 @@
 import './index.css';
 import {
-  tasks, deleteTask, editTask, addTask,
-} from './module/taskFunctions.js';
-
-import updateStatus from './module/statusFunctions.js';
-import clearAllCompletedTasks from './module/clearTask.js';
-import { dragStart, dragOver, drop } from './module/dragAndDrop.js';
+  tasks, storeTasksToLocalStorage, deleteTask, editTask, addTask,
+} from './module/taskFunction.js';
 
 const todoListContainer = document.getElementById('todoList');
 const addBtn = document.getElementById('addBtn');
-const clearBtn = document.querySelector('.clear-completed');
 
 const displayTasks = () => {
   todoListContainer.textContent = '';
@@ -42,7 +37,7 @@ const displayTasks = () => {
         const foundTask = tasks.find((task) => task.description === inputText.value);
         if (foundTask) {
           foundTask.completed = currentState;
-          updateStatus(tasks.indexOf(foundTask), currentState);
+          storeTasksToLocalStorage();
         }
       }
 
@@ -75,11 +70,6 @@ const displayTasks = () => {
       const data = textInput.value.trim();
       editTask(data, index);
     });
-
-    // Drag and drop
-    task.addEventListener('dragstart', dragStart);
-    task.addEventListener('dragover', dragOver);
-    task.addEventListener('drop', drop);
   });
 };
 
@@ -91,11 +81,6 @@ const refreshPage = () => {
   localStorage.removeItem('Tasks');
   window.location.reload();
 };
-
-clearBtn.addEventListener('click', () => {
-  clearAllCompletedTasks();
-  displayTasks();
-});
 
 initializeTasks();
 addBtn.addEventListener('click', () => {
@@ -123,7 +108,5 @@ document.addEventListener('keypress', (e) => {
   }
 });
 document.querySelector('.fa-arrows-rotate').addEventListener('click', refreshPage);
-// Add event listener to update the display
-document.addEventListener('updateDisplay', displayTasks);
 
 export {};
