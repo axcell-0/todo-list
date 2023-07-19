@@ -102,21 +102,21 @@ Run this command:
 ...sh
   cd my-project
   npm install
-  ...
+...
 
 ### Usage
 
 To run the project, execute the following command:
 
-Example command:
-open index.html using the live server
-
+...sh
+  npm start
+...
 
 ### Run tests
 
 To run tests, run the following command:
 
-[]comming soon
+npm test
 
 ### Deployment
 
