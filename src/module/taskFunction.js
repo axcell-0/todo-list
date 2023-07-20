@@ -25,15 +25,13 @@ const editTask = (description, index) => {
 };
 
 const addTask = (taskDescription) => {
-  if (taskDescription.trim() !== '') {
-    const newTask = {
-      description: taskDescription,
-      completed: false,
-      index: tasks.length + 1,
-    };
-    tasks.push(newTask);
-    storeTasksToLocalStorage();
-  }
+  const newTask = {
+    description: taskDescription,
+    completed: false,
+    index: tasks.length + 1, // Set the index as array length + 1
+  };
+  tasks.push(newTask);
+  storeTasksToLocalStorage();
 };
 
 export {
