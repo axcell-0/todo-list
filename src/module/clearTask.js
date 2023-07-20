@@ -1,4 +1,4 @@
-import { tasks, storeTasksToLocalStorage } from './taskFunctions.js';
+import { tasks, storeTasksToLocalStorage } from './taskFunction.js';
 
 const clearAllCompletedTasks = () => {
   const filteredTasks = tasks.filter((task) => !task.completed);
